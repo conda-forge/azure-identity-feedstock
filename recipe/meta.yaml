@@ -1,5 +1,5 @@
 {% set name = "azure-identity" %}
-{% set version = "1.6.0" %}
+{% set version = "1.6.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.zip
-  sha256: 2e70b00874e4f288e37804bc06bfaf216de8565c759594bf79cccfbf9ca2c78a
+  sha256: 69035c81f280fac5fa9c55f87be3a359b264853727486e3568818bb43988080e
 
 build:
   number: 0
@@ -20,9 +20,9 @@ requirements:
     - pip
     - python >=3.6
   run:
-    - azure-core <2.0.0,>=1.0.0
+    - azure-core >=1.0.0,<2.0.0
     - cryptography >=2.1.4
-    - msal <2.0.0,>=1.7.0
+    - msal >=1.7.0,<2.0.0
     - msal_extensions ~=0.3.0
     - python >=3.6
     - six >=1.12
@@ -31,10 +31,10 @@ test:
   imports:
     - azure.identity
     - azure.identity._credentials
-  commands:
-    - pip check
-  requires:
-    - pip
+  # commands:
+  #   - pip check
+  # requires:
+  #   - pip
 
 about:
   home: https://github.com/Azure/azure-sdk-for-python/tree/master/sdk/identity/azure-identity
