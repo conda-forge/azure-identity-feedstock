@@ -1,5 +1,5 @@
 {% set name = "azure-identity" %}
-{% set version = "1.9.0" %}
+{% set version = "1.10.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.zip
-  sha256: 0854d19da4c5644641814dc4f951c42e01400b5792f09dfb6bffa726d8b9160d
+  sha256: 656e5034d9cef297cf9b35376ed620085273c18cfa52cea4a625bf0d5d2d6409
 
 build:
   number: 0
