@@ -1,11 +1,11 @@
-About azure-identity
-====================
+About azure-identity-feedstock
+==============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/azure-identity-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/Azure/azure-sdk-for-python/tree/master/sdk/identity/azure-identity
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/azure-identity-feedstock/blob/main/LICENSE.txt)
 
 Summary: Microsoft Azure Identity Library for Python
 
