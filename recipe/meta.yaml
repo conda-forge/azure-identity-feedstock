@@ -1,18 +1,17 @@
 {% set name = "azure-identity" %}
-{% set version = "1.17.1" %}
-
+{% set version = "1.19.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 32ecc67cc73f4bd0595e4f64b1ca65cd05186f4fe6f98ed2ae9f1aa32646efea
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/azure_identity-{{ version }}.tar.gz
+  sha256: 500144dc18197d7019b81501165d4fa92225f03778f17d7ca8a2a180129a9c83
 
 build:
-  number: 1
-  script: {{ PYTHON }} -m pip install . -vv
+  number: 0
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   noarch: python
 
 requirements:
@@ -21,29 +20,28 @@ requirements:
     - python {{ python_min }}
     - setuptools
   run:
-    - typing-extensions >=4.0.0
-    - azure-core >=1.23.0
-    - cryptography >=2.5
-    - msal >=1.24.0
-    - msal_extensions >=0.3.0
     - python >={{ python_min }}
+    - azure-core >=1.31.0
+    - cryptography >=2.5
+    - msal >=1.30.0
+    - msal_extensions >=1.2.0
+    - typing_extensions >=4.0.0
 
 test:
-  requires:
-    - python {{ python_min }}
   imports:
     - azure.identity
     - azure.identity._credentials
-  # commands:
-  #   - pip check
-  # requires:
-  #   - pip
+  commands:
+    - pip check
+  requires:
+    - python {{ python_min }}
+    - pip
 
 about:
-  home: https://github.com/Azure/azure-sdk-for-python/tree/master/sdk/identity/azure-identity
+  home: https://github.com/Azure/azure-sdk-for-python/tree/main/sdk/identity/azure-identity
   summary: Microsoft Azure Identity Library for Python
   license: MIT
-  license_file: LICENSE.txt
+  license_file: LICENSE
 
 extra:
   recipe-maintainers:
