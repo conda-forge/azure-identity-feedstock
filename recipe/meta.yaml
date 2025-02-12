@@ -1,5 +1,5 @@
 {% set name = "azure-identity" %}
-{% set version = "1.19.0" %}
+{% set version = "1.20.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/azure_identity-{{ version }}.tar.gz
-  sha256: 500144dc18197d7019b81501165d4fa92225f03778f17d7ca8a2a180129a9c83
+  sha256: 40597210d56c83e15031b0fe2ea3b26420189e1e7f3e20bdbb292315da1ba014
 
 build:
   number: 0
