@@ -1,13 +1,13 @@
 {% set name = "azure-identity" %}
-{% set version = "1.25.3" %}
+{% set version = "1.26.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/azure_identity-{{ version }}.tar.gz
-  sha256: ab23c0d63015f50b630ef6c6cf395e7262f439ce06e5d07a64e874c724f8d9e6
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/azure_identity-{{ version }}.tar.gz
+  sha256: 61b4538b87df10d2d6d44b77cd5ea28a8929fd4929d58b45bf3f230f7daba02e
 
 build:
   number: 0
@@ -23,7 +23,7 @@ requirements:
     - python >={{ python_min }}
     - azure-core >=1.31.0
     - cryptography >=2.5
-    - msal >=1.35.1
+    - msal >=1.39.0
     - msal_extensions >=1.2.0
     - typing_extensions >=4.0.0
 
